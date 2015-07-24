@@ -1,5 +1,5 @@
 module FixtureHelpers
   def fixture_file(file_name)
-    File.read("./spec/fixtures/#{file_name}.xml").strip
+    File.read("./spec/fixtures/#{file_name}.xml").strip.gsub(/"/, "'")
   end
 end

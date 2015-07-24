@@ -3,7 +3,7 @@ require "music_xml/score"
 require "music_xml/version"
 
 module MusicXml
-  XML_VERSION = %|<?xml version='1.0' encoding='UTF-8' standalone='no'?>|
+  XML_DECLARATION = %|<?xml version='1.0' encoding='UTF-8' standalone='no'?>|
   XML_DOCTYPE = %|<!DOCTYPE score-partwise PUBLIC '-//Recordare//DTD MusicXML 3.0 Partwise//EN' 'http://www.musicxml.org/dtds/partwise.dtd'>|
 
   def xml(tag, contents, attributes)
