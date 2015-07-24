@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe MusicXml::Score do
+describe Score do
   describe "an empty score" do
     let(:score) { Score.new }
 

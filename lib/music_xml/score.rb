@@ -3,11 +3,12 @@ require "rexml/document"
 module MusicXml
   class Score
     def to_xml
-      format_xml([
+      body = [
         MusicXml::XML_DECLARATION,
         MusicXml::XML_DOCTYPE,
         xml(:score_partwise, nil, version: "3.0")
-      ].join(""))
+      ].join("")
+      format_xml(body)
     end
 
     private
