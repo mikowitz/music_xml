@@ -1,5 +1,6 @@
 require "core_ext"
 require "music_xml/clef"
+require "music_xml/key"
 require "music_xml/score"
 require "music_xml/version"
 
