@@ -2,6 +2,7 @@ require "core_ext"
 require "music_xml/clef"
 require "music_xml/key"
 require "music_xml/score"
+require "music_xml/time_signature"
 require "music_xml/version"
 
 module MusicXml
