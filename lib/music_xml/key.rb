@@ -21,14 +21,22 @@ module MusicXml
     end
 
     def fifths
+      @fifths ||= calculate_fifths
+    end
+
+    def to_xml
+      xml(:key, xml(:fifths, fifths))
+    end
+
+    private
+
+    def calculate_fifths
       base = NATURAL_MAJOR_MAPPING[key]
       base -= 3 if minor?
       base += 7 if sharp?
       base -= 7 if flat?
       base
     end
-
-    private
 
     def assign_key_and_mode(key, mode)
       @key, @mode = parse_key(key), mode
