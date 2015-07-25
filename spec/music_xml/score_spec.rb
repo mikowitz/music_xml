@@ -18,15 +18,16 @@ describe Score do
               divisions 1
               key :C.major
               time 4, 4
-              clef :G, 2
+              clef :treble
             end
             c(4, 4)
           end
-          measure do
-            d(4, 4)
-          end
         end
       end
+    end
+
+    it "should write a very basic musicXML file" do
+      confirm_score("basic_score")
     end
   end
 

@@ -43,12 +43,11 @@ module MusicXml
     end
 
     def parse_key(key)
-      key_pitch = key[0].to_sym
       case key[1]
       when "#" then @sharp = true
       when "b" then @flat = true
       end
-      key_pitch
+      key[0].to_sym
     end
 
     def minor?
